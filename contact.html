@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Pond View Vehicle Storage</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Pond View Vehicle Storage LLC</h1>
+      <p>Indoor Winter Storage for Cars, Boats, and RVs</p>
+    </header>
+
+    <nav>
+      <a href="index.html">About</a>
+      <a href="reservation.html">Book Reservation</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <main>
+      <h2>Contact Us</h2>
+      <p>
+        For general inquiries, please fill out the form below or reach us by
+        phone. Messages are sent directly to our management email and will be
+        responded to as soon as possible.
+      </p>
+
+      <form
+        action="https://5om6peceo2.execute-api.us-east-2.amazonaws.com"
+        method="POST"
+        style="max-width: 1024px; margin: 2rem auto;"
+      >
+        <!-- required for security -->
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="New message from Pond View website" />
+        <input type="hidden" name="_template" value="table" />
+
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="phone">Phone:</label><br />
+        <input type="text" id="phone" name="phone" /><br /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p style="text-align:center;">
+        Or reach us directly:<br />
+        <strong>(401) 568-8238</strong> | <strong>(401) 641-5089</strong><br />
+        <a href="mailto:info@pondview.biz">info@pondview.biz</a>
+      </p>
+    </main>
+
+    <footer>
+      &copy; 2025 Pond View Vehicle Storage LLC | Pascoag, Rhode Island
+    </footer>
+  </body>
+</html>
