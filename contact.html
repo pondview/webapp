@@ -27,16 +27,7 @@
         responded to as soon as possible.
       </p>
 
-      <form
-        action="https://5om6peceo2.execute-api.us-east-2.amazonaws.com/contact"
-        method="POST"
-        style="max-width: 1024px; margin: 2rem auto;"
-      >
-        <!-- required for security -->
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_subject" value="New message from Pond View website" />
-        <input type="hidden" name="_template" value="table" />
-
+      <form id="contactForm" style="max-width: 1024px; margin: 2rem auto;">
         <label for="name">Name:</label><br />
         <input type="text" id="name" name="name" required /><br /><br />
 
@@ -62,5 +53,10 @@
     <footer>
       &copy; 2025 Pond View Vehicle Storage LLC | Pascoag, Rhode Island
     </footer>
+
+    <script src="main.js"></script>
+    <script>
+      configureForm("contactForm", "https://5om6peceo2.execute-api.us-east-2.amazonaws.com/contact");
+    </script>
   </body>
 </html>
