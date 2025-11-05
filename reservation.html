@@ -3,31 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pond View Vehicle Storage | Pascoag, RI</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Book Reservation | Pond View Storage</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body>
     <header>
-      <h1>Pond View Vehicle Storage LLC</h1>
+      <h1>Pond View Storage</h1>
       <p>Indoor Winter Storage for Cars, Boats, and RVs</p>
     </header>
 
     <nav>
       <a href="index.html">About</a>
-      <a href="reservation.html">Book Reservation</a>
+      <a href="reservation.html" class="active">Book Reservation</a>
       <a href="contact.html">Contact</a>
     </nav>
 
     <main>
-      <h2>Oops!</h2>
+      <h2>Book Your Storage Reservation</h2>
       <p>
-        This page is not available yet.
+        Please provide your contact details and information about the vehicle, boat, or RV
+        you wish to store. Once received, we’ll confirm availability and follow up with
+        next steps. No payment is required through this site.
       </p>
+
+      <form id="reservationForm" style="max-width: 1024px; margin: 2rem auto;">
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" class="email" required /><br /><br />
+
+          <label for="phone">Phone:</label><br />
+          <input type="text" id="phone" name="phone" class="phone" required /><br /><br />
+        </fieldset>
+
+        <fieldset>
+          <legend>Storage Details</legend>
+          <label for="vehicleType">Vehicle Type:</label><br />
+          <select id="vehicleType" name="vehicleType" required>
+            <option value="">Select type...</option>
+            <option value="car">Car</option>
+            <option value="boat">Boat</option>
+            <option value="rv">RV</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="other">Other</option>
+          </select><br /><br />
+
+          <label for="storageStart">Desired Storage Start Date:</label><br />
+          <input type="date" id="storageStart" name="storageStart" required /><br /><br />
+
+          <label for="storageEnd">Desired Storage End Date:</label><br />
+          <input type="date" id="storageEnd" name="storageEnd" required /><br /><br />
+
+          <label for="notes">Additional Notes / Special Requests:</label><br />
+          <textarea id="notes" name="notes" rows="5"></textarea><br /><br />
+        </fieldset>
+
+        <button type="submit">Submit Reservation</button>
+      </form>
     </main>
 
     <footer>
-      &copy; 2025 Pond View Vehicle Storage LLC | Pascoag, Rhode Island
+      &copy; 2025 Pond View Storage | Pascoag, Rhode Island
     </footer>
+
+    <script src="site.js"></script>
+    <script>
+      // Replace with your actual reservation Lambda endpoint
+      configureForm("reservationForm", "https://5om6peceo2.execute-api.us-east-2.amazonaws.com/reservation");
+    </script>
   </body>
 </html>
