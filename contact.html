@@ -29,16 +29,16 @@
 
       <form id="contactForm" style="max-width: 1024px; margin: 2rem auto;">
         <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" required /><br /><br />
+        <input type="text" id="name" name="name" maxlength="64" required /><br /><br />
 
         <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
+        <input type="email" id="email" name="email" maxlength="256" class="email" required /><br /><br />
 
         <label for="phone">Phone:</label><br />
-        <input type="text" id="phone" name="phone" /><br /><br />
+        <input type="text" id="phone" name="phone" maxlength="15" class="phone" /><br /><br />
 
         <label for="message">Message:</label><br />
-        <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+        <textarea id="message" name="message" rows="5" maxlength="4096" required></textarea><br /><br />
 
         <button type="submit">Send Message</button>
       </form>

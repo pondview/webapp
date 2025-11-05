@@ -49,3 +49,29 @@ footer {
     color: #777;
     background-color: #f0f0f0;
 }
+
+.user-message-popup {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(220, 53, 69, 0.95); /* Bootstrap danger red tone */
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+.user-message-popup.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.input-error {
+  border: 2px solid #dc3545; /* same red tone as popup */
+  background-color: #fff5f5;
+}
